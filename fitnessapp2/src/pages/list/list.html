@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{pageName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let d of dataArray">
+    <!-- <img src="assets/imgs/test.jpg"/> -->
+    <img src={{d.image_url}}/>
+    <ion-card-content>
+      <ion-card-title>
+        {{d.title}}
+        
+        </ion-card-title>
+      <p>
+        Details: {{d.description}}
+      </p>
+      <!-- <ion-badge *ngFor="let b of d.categories">{{b}}</ion-badge> -->
+    </ion-card-content>
+    <div padding>
+      <button ion-button full (click)="detailPage(d)">Tutorial</button>
+    </div>
+  </ion-card>
+
+</ion-content>

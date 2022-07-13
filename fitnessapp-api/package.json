@@ -1,0 +1,24 @@
+{
+  "name": "fitnessapp-api",
+  "version": "1.0.0",
+  "description": "fitnessapp-api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ilyas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "cookie-parser": "1.4.5",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-jwt": "5.3.1",
+    "helmet": "3.22.0",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.15",
+    "mongoose": "5.9.7",
+    "morgan": "^1.10.0"
+  }
+}

@@ -1,0 +1,33 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>LOGIN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h2>UNISEL FITNESS APP</h2>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>STUDENT/STAFF ID</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="user.id" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>PASSWORD</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button full  [disabled]="!user.id || !user.password" (click)="login()">LOGIN</button>
+  </div>
+  <div padding>
+    <button ion-button full (click)="registerPage()">SIGNUP</button>
+  </div>
+
+</ion-content>

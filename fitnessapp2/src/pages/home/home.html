@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>HOMEPAGE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3>CATEGORY</h3>
+  <ion-card *ngFor="let d of data">
+    <!-- <img src="assets/imgs/test.jpg"/> -->
+    <img src={{d.img_url}}/>
+    <ion-card-content>
+      <ion-card-title>
+        {{d.name}}
+        </ion-card-title>
+      <p>
+        Exercise: {{d.description}}
+      </p>
+      <!-- <ion-badge *ngFor="let b of d.categories">{{b}}</ion-badge> -->
+    </ion-card-content>
+    <div padding>
+      <button ion-button full (click)="listPage(d)">Details</button>
+    </div>
+  </ion-card>
+  
+</ion-content>
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+

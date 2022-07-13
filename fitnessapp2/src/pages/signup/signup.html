@@ -1,0 +1,42 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>SIGNUP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h2>UNISEL FITNESS APP</h2>
+  <p>Already Registered? Login <a (click)="login()">here</a></p>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>NAME</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="user.name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>STUDENT/STAFF ID</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="user.id" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>PASSWORD</ion-label>
+      <ion-input type="password" value="" [(ngModel)]="user.password" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>DATE OF BIRTH</ion-label>
+      <ion-input type="date" value="" [(ngModel)]="user.dob" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>EMAIL</ion-label>
+      <ion-input type="email" value="" [(ngModel)]="user.email" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button full [disabled]="!user.email || !user.password" (click)="register()">SIGN UP</button>
+  </div>
+</ion-content>
