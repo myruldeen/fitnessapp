@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { Globals } from '../app/app.globals';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,7 +15,7 @@ export class DataService {
     }
 
     getData() {
-        return this.http.get<any>('http://127.0.0.1:3000/data/list');
+        return this.http.get<any>(Globals.BASE_API_URL + 'data/list');
     }
 
     // getData() {
